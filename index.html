@@ -153,7 +153,7 @@
 
 
   // 住民税（課税所得の10%）
-  const residentTax = Math.floor(annualTaxable * 0.10);
+  const residentTax = Math.floor(annualTaxable * 0.10 / 12);
   document.getElementById('residentTax_out').textContent = formatYen(residentTax);
 
   const netMonthly = Math.floor(monthlyGross + monthlyAllowance - monthlySocial - monthlyIncomeTax);
